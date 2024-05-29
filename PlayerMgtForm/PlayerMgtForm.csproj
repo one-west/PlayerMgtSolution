@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E89A2B52-1C4F-4100-A8E0-8554A3A3A035}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PlayerMgtForm</RootNamespace>
+    <AssemblyName>PlayerMgtForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertForm.Designer.cs">
+      <DependentUpon>InsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InsertForm.resx">
+      <DependentUpon>InsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\LoginForm.datasource" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\PlayerMgtForm.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\PlayerMgtForm.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backgraund.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\ANYANG_FC.ico" />
+    <Content Include="resources\Clubs\ANSAN_FC.png" />
+    <Content Include="resources\Clubs\ANYANG_FC.png" />
+    <Content Include="resources\Clubs\ASAN_FC.png" />
+    <Content Include="resources\Clubs\BUCHEON_FC1995.png" />
+    <Content Include="resources\GKUniForm.png" />
+    <Content Include="resources\Sponsor\BDNS.png" />
+    <Content Include="resources\Sponsor\NHBank.png" />
+    <Content Include="resources\Sponsor\OHC xaiel.png" />
+    <Content Include="resources\Sponsor\OSANG HEALTHCARE.png" />
+    <Content Include="resources\Sponsor\SeoulNow.png" />
+    <Content Include="resources\Sponsor\VEXX.png" />
+    <Content Include="resources\Staff\GK코치 최익현.png" />
+    <Content Include="resources\Staff\감독 이우형.png" />
+    <Content Include="resources\Staff\수석코치 유병훈.png" />
+    <Content Include="resources\Staff\스카우터 주현재.png" />
+    <Content Include="resources\Staff\실장 조해원.png" />
+    <Content Include="resources\Staff\의무팀장 서준석.png" />
+    <Content Include="resources\Staff\장비관리사 주종환.png" />
+    <Content Include="resources\Staff\재활트레이너 신영재.png" />
+    <Content Include="resources\Staff\재활트레이너 황희석.png" />
+    <Content Include="resources\Staff\전력분석관 김성주.png" />
+    <Content Include="resources\Staff\코치 김연건.png" />
+    <Content Include="resources\Staff\통역&amp;매니저 노상래.png" />
+    <Content Include="resources\Staff\피지컬코치 김성현.png" />
+    <Content Include="resources\UniForm.png" />
+    <Content Include="resources\구단주.png" />
+    <None Include="resources\K리그2_로고.png" />
+    <Content Include="resources\Ground.jpg" />
+    <Content Include="resources\Player\TPlayer_공민현_FW.png" />
+    <Content Include="resources\Player\TPlayer_구대영_DF.png" />
+    <Content Include="resources\Player\TPlayer_김동진_DF.png" />
+    <Content Include="resources\Player\TPlayer_김륜도_FW.png" />
+    <Content Include="resources\Player\TPlayer_김성동_GK.png" />
+    <Content Include="resources\Player\TPlayer_김정민_MF.png" />
+    <Content Include="resources\Player\TPlayer_김정현_MF.png" />
+    <Content Include="resources\Player\TPlayer_김태훈_GK.png" />
+    <Content Include="resources\Player\TPlayer_김하준_DF.png" />
+    <Content Include="resources\Player\TPlayer_김형진_DF.png" />
+    <Content Include="resources\Player\TPlayer_라에르시오_FW.png" />
+    <Content Include="resources\Player\TPlayer_류승우_FW.png" />
+    <Content Include="resources\Player\TPlayer_문성우_MF.png" />
+    <Content Include="resources\Player\TPlayer_박경빈_DF.png" />
+    <Content Include="resources\Player\TPlayer_박성수_GK.png" />
+    <Content Include="resources\Player\TPlayer_박종현_DF.png" />
+    <Content Include="resources\Player\TPlayer_백동규_DF.png" />
+    <Content Include="resources\Player\TPlayer_브루노_FW.png" />
+    <Content Include="resources\Player\TPlayer_안용우_FW.png" />
+    <Content Include="resources\Player\TPlayer_야고_FW.png" />
+    <Content Include="resources\Player\TPlayer_양정운_FW.png" />
+    <Content Include="resources\Player\TPlayer_연제민_DF.png" />
+    <Content Include="resources\Player\TPlayer_윤준성_DF.png" />
+    <Content Include="resources\Player\TPlayer_이동수_MF.png" />
+    <Content Include="resources\Player\TPlayer_이재용_FW.png" />
+    <Content Include="resources\Player\TPlayer_이창용_DF.png" />
+    <Content Include="resources\Player\TPlayer_이태희_DF.png" />
+    <Content Include="resources\Player\TPlayer_정준연_DF.png" />
+    <Content Include="resources\Player\TPlayer_조성준_FW.png" />
+    <Content Include="resources\Player\TPlayer_주현우_MF.png" />
+    <Content Include="resources\Player\TPlayer_최성범_FW.png" />
+    <Content Include="resources\Player\TPlayer_홍창범_MF.png" />
+    <Content Include="resources\Player\TPlayer_홍현호_FW.png" />
+    <Content Include="resources\Player\TPlayer_황기욱_MF.png" />
+    <Content Include="resources\Clubs\BUSAN_IPARK.png" />
+    <Content Include="resources\Clubs\CHEONAN_FC.png" />
+    <Content Include="resources\Clubs\CHEONJU_FC.png" />
+    <Content Include="resources\Clubs\GIMCHEON_SANGMU.png" />
+    <Content Include="resources\Clubs\GIMPO_FC.png" />
+    <Content Include="resources\Clubs\GYEONGNAM_FC.png" />
+    <Content Include="resources\Clubs\JEONNAM_DRAGONS_FC.png" />
+    <Content Include="resources\Clubs\SEONGNAM_FC.png" />
+    <Content Include="resources\Clubs\SEOUL_ELAND.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
